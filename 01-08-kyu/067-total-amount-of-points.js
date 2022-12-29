@@ -21,9 +21,9 @@ our team always plays 10 matches in the championship
 */
 
 /*
-=========
-SOLUTION
-=========
+===========
+SOLUTION 1
+===========
 */
 const points = games => {
   let ourTeamSumScore = 0;
@@ -39,3 +39,10 @@ const points = games => {
     
   return ourTeamSumScore;
 }
+
+/*
+===========
+SOLUTION 2
+===========
+const points = games => games.reduce((sum, score) => sum + (score[0] > score[2] ? 3 : score[0] < score[2] ? 0 : 1), 0);
+*/
